@@ -47,22 +47,25 @@ export default function Profile() {
   const renderUserCard = (item) => {
     return (
       <View style={styles.card}>
-        <Text style={styles.title}> {item.displayName} </Text>
-        <Text style={styles.email}> {item.email} </Text>
-        <Text style={styles.username}> ID: {item.uid} </Text>
+        <Text style={styles.title}>{item.displayName}</Text>
+        <Text style={styles.email}>{item.email}</Text>
+        <Text style={styles.username}> {item.uid}</Text>
       </View>
     );
   };
+  
+  
 
   return (
-    <View style={styles.container}>
-      {currentUser && renderUserCard(currentUser)} {/* Renderiza o cartão do usuário atual apenas se houver um usuário autenticado */}
+        <View style={styles.container}>
+      {currentUser && renderUserCard(currentUser)}
       <FlatList
         data={users}
         renderItem={({ item }) => renderUserCard(item)}
-        keyExtractor={(item) => item.uid} // Use um identificador único, como uid, como chave
+        keyExtractor={(item) => item.uid}
       />
-    </View>
+</View>
+
   );
 }
 
