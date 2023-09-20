@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Button } from 'react-native';
 import Paho from 'paho-mqtt';
-import firebase from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 import 'firebase/firestore';
+import style from './style';
 
 export default function MQTTDisplay() {
   const [mqttMessage, setMqttMessage] = useState('');
@@ -10,7 +11,7 @@ export default function MQTTDisplay() {
 
   useEffect(() => {
     // Configurações do cliente MQTT
-    const client = new Paho.Client('10.44.1.35', 9001, '/');
+    const client = new Paho.Client('10.44.1.35', 1880, '/');
     const topic = 'acesso/usuario';
 
     const onConnect = () => {
@@ -58,31 +59,21 @@ export default function MQTTDisplay() {
   // Função para enviar dados para o Firestore
   const sendDataToFirestore = (data) => {
     const firebaseConfig = {
-          apiKey: "AIzaSyCCBhTZxbmIHDcSfscBmhstMpL-t3A89KA",
-      authDomain: "maker-project-13166.firebaseapp.com",
-      projectId: "maker-project-13166",
-      storageBucket: "maker-project-13166.appspot.com",
-      messagingSenderId: "489445184712",
-      appId: "1:489445184712:web:00adb5524a57b0dee441fd",
-      measurementId: "G-DP4CBB79MN"
+      // Substitua 'your_firebase_config' pelo objeto de configuração do Firebase
     };
 
     if (!firebase.apps.length) {
-      firebase.initializeApp(firebaseConfig);
+      initializeApp(firebaseConfig); // Use initializeApp em vez de firebase.initializeApp
     }
 
     const db = firebase.firestore();
-    const collection = db.collection('UserBio');
+    const collection = db.collection('users_bio');
 
     // Adicione os dados ao Firestore
     collection.add({
-      id: 'otn73LSvxizMWZxouECo', // Substitua por um valor único ou deixe o Firestore gerar automaticamente
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      timestamp: new Date(),
       message: data,
-      topic: 'acesso/usuario', // Adicione informações adicionais se necessário
-      sender: 'JohnDoe', // Adicione informações adicionais se necessário
     })
-    
       .then((docRef) => {
         console.log('Dados enviados para o Firestore com ID: ', docRef.id);
       })
@@ -92,12 +83,13 @@ export default function MQTTDisplay() {
   };
 
   return (
-    <View>
-      <Text>Informação do MQTT:</Text>
-      <Text>{mqttMessage}</Text>
-      <Text>Status da Conexão MQTT: {isConnected ? 'Conectado' : 'Desconectado'}</Text>
+    <View  style={style.card} >
+      <Text style={style.title} >Informação do MQTT:</Text>
+      <Text style={style.title}>{mqttMessage}</Text>
+      <Text style={style.title}>Status da Conexão MQTT: {isConnected ? 'Conectado' : 'Desconectado'}</Text>
     </View>
   );
 }
+
 
 
