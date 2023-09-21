@@ -7,7 +7,9 @@ import Profile from '../Component/Screens/Profile/Profile';
 import Help from '../Component/Screens/Help/Help';
 import Login from '../Component/Screens/Login/Login'
 import Profit from '../Component/Screens/Profit/Profit';
+import Mqtt from  '../Component/Mqtt/Mqtt'
 import Ionicons from '@expo/vector-icons/Ionicons';
+
 import { View } from 'react-native'; 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -17,8 +19,8 @@ const DashboardIcon =({focused,size})=><Ionicons name='md-home' size={size} colo
 const ProfileIcon =({focused, color, size})=><Ionicons name='md-person' size={size} color={color} />
 const HelpdIcon =({focused, color, size})=><Ionicons name='md-refresh-circle' size={size} color={color} />
 const ProfitIcon =({focused, color, size})=><Ionicons name='md-cart' size={size} color={color} />
-const LoginIcon = ({focused, color, size}) =><Ionicons name='md-login' size={size} color={color}/>
-
+const LoginIcon = ({focused, color, size}) => <Ionicons name='md-login' size={size} color={color}/>
+const MqqtIcon = ({focused, color, size}) =>  <Ionicons name='md-git-network' size={size} color={color}/>
 
 const MainDrawer = () => {
   return (
@@ -39,6 +41,7 @@ const MainDrawer = () => {
             <Drawer.Screen name="Help" component={Help} options={{ drawerIcon: HelpdIcon }} />
             <Drawer.Screen name="Profit" component={Profit} options={{ drawerIcon: ProfitIcon }} />
             <Drawer.Screen name="Login" component={Login} options={{drawerIcon: LoginIcon}} />
+            <Drawer.Screen name="mqtt" component={Mqtt} options={{drawerIcon: MqqtIcon}} />
           </Drawer.Navigator>
         )}
       </Stack.Screen>
