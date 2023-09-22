@@ -3,47 +3,56 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
+        alignItems: 'flex',
         justifyContent: 'center',
-        backgroundColor: '#006400'
+        
     },
     text: {
+        
         fontWeight: 'bold',
         fontSize: 16,
         margin: 15,
-        color: '#fff'
+        color: '#fafafa',
+      
+        
+       
     },
     logo: { 
+
         height: 200,
         width: 200,
         padding: 10,
         borderRadius: 12,
         borderColor:  '#000',
         borderWidth: 2,
-    },
+   
+        },
     input: { 
         marginBottom: 10,
-        padding: 10,
-        width: 320,
+        padding: 20,
+        width: 620,
         fontSize: 16,
         fontWeight: 'bold',
         backgroundColor: '#fff',
         borderRadius: 12,
         borderColor:  '#000',
         borderWidth: 2,
+        alignContent: 'center',
+        justifyContent: 'center'
     },
     btn: { 
         marginBottom: 10,
-        padding:10,
+        padding:15, 
         width: 320,
         fontSize: 18,
         fontWeight: 'bold',
-        backgroundColor: '#0d8203',
+        backgroundColor: '#1c3ed6',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 12,
         borderColor:  '#000',
         borderWidth: 2,
+        
     },
     btncadastro: { 
         marginBottom: 10,
@@ -68,10 +77,18 @@ export default StyleSheet.create({
     fundo: {
         
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+
+        justifyContent: 'flex',
         backgroundColor: '#8000FF'
     },
+    cont:{
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    textcont:{
+        justifyContent: 'flex-end',
+        left: 450,
+    }
   
   
   

@@ -11,7 +11,7 @@ const Fundo = require ('../../../images/fundo4.jpg')
 
 export default function App() {
   useEffect(() => {
-    const client = new Paho.Client('10.44.1.35', 9001, '/');
+    const client = new Paho.Client('10.44.1.35', 1883, '/');
 
     client.connect({
       onSuccess: function () {

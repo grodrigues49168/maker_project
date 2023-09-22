@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, SafeAreaView, ImageBackground, Alert, } from 'react-native';
-import Mqtt from '../../Mqtt/Mqtt'
-import style from "../Home/style";
+import { View } from "react-native";
+import style from "./style";
+import MQTTDisplay from "../../Mqtt/Mqtt"; // Importe o componente MQTTDisplay
 
 export default props => (
   <View style={style.card}>
+   
   </View>
-)
+);
