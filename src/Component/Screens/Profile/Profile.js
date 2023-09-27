@@ -47,9 +47,9 @@ export default function Profile() {
   const renderUserCard = (item) => {
     return (
       <View style={styles.card}>
-        <Text style={styles.title}>{item.displayName}</Text>
-        <Text style={styles.email}>{item.email}</Text>
+        <Text style={styles.title}>{item.email}</Text>
         <Text style={styles.username}> {item.uid}</Text>
+        <Text style={styles.email}>{item.timestamp}</Text>
       </View>
     );
   };

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Alert, ImageBackground, Touchable } from 'react-native';
+import { View, Text, TextInput, Button, Alert, ImageBackground, ScrollView } from 'react-native';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigation } from '@react-navigation/native'; // Importe a navegação
 import Styles from './style'
@@ -13,6 +13,7 @@ export default function CadastroScreen() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [senhaAdministrador, setSenhaAdministrador] = useState('');
+  const [id, setId] = useState('')
   const navigation = useNavigation(); // Obtenha a navegação
 
 
@@ -26,6 +27,7 @@ export default function CadastroScreen() {
           setEmail("");
           setSenha("");
           setSenhaAdministrador("");
+          setId("")
 
         })
         .catch((error) => {
@@ -42,8 +44,9 @@ export default function CadastroScreen() {
   return (
     <ImageBackground source={Fundo}  imageStyle={{opacity:2.0}} style={Styles.fundo} >
     <View style={Styles.container}>
+      <ScrollView>
         <SafeAreaView style={Styles.textcont}>
-                <Text style={Styles.text}>email</Text>
+                <Text style={Styles.text}>Email</Text>
             </SafeAreaView>
 
         
@@ -67,6 +70,21 @@ export default function CadastroScreen() {
             value={senha}
             onChangeText={(text) => setSenha(text)}
         />
+        
+        </SafeAreaView>
+        <SafeAreaView style={Styles.textcont}>
+            <Text style={Styles.text}>id</Text>
+        </SafeAreaView>
+        <SafeAreaView style={Styles.cont}>
+        
+        <TextInput
+            style={Styles.input}
+            placeholder="id"
+
+            value={id}
+            onChangeText={(number) => setId(number)}
+        />
+        
         </SafeAreaView>
         <SafeAreaView style={Styles.textcont}>
             <Text style={Styles.text}>Senha do administrador</Text>
@@ -86,7 +104,7 @@ export default function CadastroScreen() {
             <Text style={Styles.textbtn} > Cadastrar</Text>
         </TouchableOpacity>
         </SafeAreaView>
-        
+        </ScrollView>
     </View>
     </ImageBackground>
   );
