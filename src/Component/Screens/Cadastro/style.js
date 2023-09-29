@@ -87,7 +87,7 @@ export default StyleSheet.create({
     },
     textcont:{
         justifyContent: 'flex-end',
-        left: 320,
+        left: 450,
     }
   
   
