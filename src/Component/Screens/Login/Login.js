@@ -4,6 +4,8 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } f
 import { authentication } from '../../../config/firebase'
 import { View, Text, TouchableOpacity, Image, TextInput, SafeAreaView, ImageBackground} from 'react-native';
 import Styles from './style';
+import Home from '../Home/Dashboard'
+import { useNavigation } from '@react-navigation/native';
 
 
 export default ({navigation}) => {
@@ -20,8 +22,7 @@ export default ({navigation}) => {
             alert("Autenticado");
             setEmail("");
             setSenha("");
-
-            navigation.navigate("Home")
+            navigation.navigate('Home')
         })
         .catch((error) => {
             const errorCode = error.code;

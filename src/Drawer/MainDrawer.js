@@ -41,7 +41,7 @@ const MainDrawer = () => {
             <Drawer.Screen name="Home" component={Dashboard} options={{ drawerIcon: DashboardIcon }} color="white"/>
             <Drawer.Screen name="Profile" component={Profile} options={{ drawerIcon: ProfileIcon }} />
             <Drawer.Screen name="Links/Versão" component={Version} options={{ drawerIcon: VersionIcon }} />
-            <Drawer.Screen name="Login" component={Login} options={{drawerIcon: LoginIcon}} />
+            <Drawer.Screen name="Login" component={Login} options={{drawerIcon: LoginIcon}}  />
             <Drawer.Screen name="mqtt" component={Mqtt} options={{drawerIcon: MqqtIcon}} />
             <Drawer.Screen name="Cadastro" component={Cadastro} options={{drawerIcon: CadastroIcon}} />
 

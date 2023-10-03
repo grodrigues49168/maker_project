@@ -26,7 +26,7 @@ export default function () {
   const backgroundColors = {
     github: useSharedValue('#fff'),
     Potimaker: useSharedValue('#fff'),
-    gmail: useSharedValue('#fff'),
+    insta: useSharedValue('#fff'),
   };
 
   const handleOpenLink = (url) => {
@@ -76,15 +76,14 @@ export default function () {
         backgroundColor: backgroundColors.Potimaker.value,
       };
     }),
-    gmail: useAnimatedStyle(() => {
+    insta: useAnimatedStyle(() => {
       return {
         opacity: opacity.value,
         transform: [{ scale: scale.value }],
-        backgroundColor: backgroundColors.gmail.value,
+        backgroundColor: backgroundColors.insta.value,
       };
     }),
   };
-
   return (
     <View style={style.container}>
       <Text style={style.upperText}>Links/Versão</Text>
@@ -120,17 +119,17 @@ export default function () {
           </TapGestureHandler>
         </Animated.View>
 
-        <Animated.View style={[style.card, animatedStyles.gmail]}>
+        <Animated.View style={[style.card, animatedStyles.insta]}>
           <TapGestureHandler
             onHandlerStateChange={({ nativeEvent }) => {
               if (nativeEvent.state === State.END) {
-                onButtonPress('potimaker.ifrn@gmail.com', 'gmail');
+                onButtonPress('https://instagram.com/potimaker.ifrn?igshid=NzZhOTFlYzFmZQ==', 'insta');
               }
             }}
           >
             <Animated.View style={style.button} {...{ gestureHandler }}>
-              <FontAwesome5 name="envelope" size={24} color="black" />
-              <Text style={style.buttonText}>Gmail</Text>
+              <FontAwesome5 name="instagram" size={24} color="black" />
+              <Text style={style.buttonText}>Instagram</Text>
             </Animated.View>
           </TapGestureHandler>
         </Animated.View>

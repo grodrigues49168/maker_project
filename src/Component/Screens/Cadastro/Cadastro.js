@@ -125,10 +125,8 @@ const CadastroScreen = () => {
     <ImageBackground source={Fundo} imageStyle={{ opacity: 2.0 }} style={Styles.fundo}>
       <View style={Styles.container}>
         <ScrollView>
-        <SafeAreaView style={Styles.textcont}>
+        <SafeAreaView style={Styles.cont}>
             <Text style={Styles.text}>Nome:</Text>
-          </SafeAreaView>
-          <SafeAreaView style={Styles.cont}>
             <TextInput
               placeholder="Digite seu nome"
               value={nome}
@@ -136,10 +134,8 @@ const CadastroScreen = () => {
               style={Styles.input}
             />
           </SafeAreaView>
-          <SafeAreaView style={Styles.textcont}>
-            <Text style={Styles.text}>Email:</Text>
-          </SafeAreaView>
           <SafeAreaView style={Styles.cont}>
+            <Text style={Styles.text}>Email:</Text>
             <TextInput
               placeholder="Digite seu email"
               value={email}
@@ -147,10 +143,8 @@ const CadastroScreen = () => {
               style={Styles.input}
             />
           </SafeAreaView>
-          <SafeAreaView style={Styles.textcont}>
-            <Text style={Styles.text}>Senha:</Text>
-          </SafeAreaView>
           <SafeAreaView style={Styles.cont}>
+            <Text style={Styles.text}>Senha:</Text>
             <TextInput
               placeholder="Digite uma senha"
               value={senha}
@@ -159,10 +153,9 @@ const CadastroScreen = () => {
               secureTextEntry
             />
           </SafeAreaView>
-          <SafeAreaView style={Styles.textcont}>
-            <Text style={Styles.text}>Id:</Text>
-          </SafeAreaView>
           <SafeAreaView style={Styles.cont}>
+            <Text style={Styles.text}>Id:</Text>
+       
             <TextInput
               placeholder="Digite seu id"
               value={id}
@@ -170,10 +163,9 @@ const CadastroScreen = () => {
               style={Styles.input}
             />
           </SafeAreaView>
-          <SafeAreaView style={Styles.textcont}>
-            <Text style={Styles.text}>Senha do Administrador:</Text>
-          </SafeAreaView>
           <SafeAreaView style={Styles.cont}>
+            <Text style={Styles.text}>Senha do Administrador:</Text>
+  
             <TextInput
               placeholder="Digite a senha do administrador"
               value={senhaAdministrador}

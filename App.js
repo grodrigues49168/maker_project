@@ -1,11 +1,5 @@
+import React from 'react'
+import Navigation from './src/Component/Navigation'
 
-import MainDrawer from './src/Drawer/MainDrawer';
-
-export default function App() {
-  return (
-   <>
-    <MainDrawer />
-   </>
-  );
-}
+export default props => <Navigation />
 

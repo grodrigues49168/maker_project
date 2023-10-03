@@ -2,8 +2,7 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     container: {
-        flex: 1,
-        alignItems: 'flex',
+
         justifyContent: 'center',
         
     },
@@ -30,7 +29,7 @@ export default StyleSheet.create({
     input: { 
         marginBottom: 10,
         padding: 20,
-        width: 620,
+        width: 500,
         fontSize: 16,
         fontWeight: 'bold',
         backgroundColor: '#fff',
@@ -75,10 +74,7 @@ export default StyleSheet.create({
         
     },
     fundo: {
-        
-        flex: 1,
-
-        justifyContent: 'flex',
+       
         backgroundColor: '#8000FF'
     },
     cont:{
