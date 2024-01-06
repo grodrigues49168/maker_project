@@ -22,7 +22,7 @@ export default function HomeNavigationDrawer() {
             }}
         >
             <Drawer.Screen
-                name='HomeTab'
+                name='Home'
                 component={HomeNavigation}
                 options={{
                     drawerIcon: ({ focused }) => (
@@ -47,7 +47,7 @@ export default function HomeNavigationDrawer() {
                 }}
             />
             <Drawer.Screen
-                name="Cadastrar usuarios"
+                name="Cadastro novos usuários"
                 component={Cadastrar_MNavigation}
                 options={{
                     drawerIcon: ({ focused }) => (
@@ -72,7 +72,7 @@ export default function HomeNavigationDrawer() {
                 }}
             />
             <Drawer.Screen
-                name="Usuarios"
+                name="Registro de Usuários"
                 component={Profile_PNavigation}
                 options={{
                     drawerIcon: ({ focused }) => (
@@ -96,7 +96,8 @@ export default function HomeNavigationDrawer() {
                     )
                 }}
             />
-            <Drawer.Screen
+          
+          <Drawer.Screen
                 name="Mqtt-Id"
                 component={Mqtt_BNavigation}
                 options={{

@@ -157,7 +157,7 @@ const CadastroScreen = () => {
             <Text style={Styles.text}>Id:</Text>
        
             <TextInput
-              placeholder="Digite seu id"
+              placeholder="Digite seu id- exemplo 1.00"
               value={id}
               onChangeText={(text) => setId(text)}
               style={Styles.input}
@@ -175,7 +175,7 @@ const CadastroScreen = () => {
             />
           </SafeAreaView>
           <SafeAreaView style={Styles.cont}>
-            <TouchableOpacity title="Cadastrar" style={Styles.btn} onPress={()=>{handleCadastro(); ligar(); }}>
+            <TouchableOpacity title="Cadastrar" style={Styles.btn} onPress={handleCadastro}>
               <Text style={Styles.textbtn}>Cadastrar</Text>
             </TouchableOpacity>
           </SafeAreaView>

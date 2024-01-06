@@ -42,7 +42,6 @@ export function Cadastrar_MNavigation() {
         </Stack.Navigator>
     )
 }
-
 export function Mqtt_BNavigation() {
     return (
         <Stack.Navigator
@@ -55,7 +54,6 @@ export function Mqtt_BNavigation() {
         </Stack.Navigator>
     )
 }
-
 export function Profile_PNavigation() {
     return (
         <Stack.Navigator

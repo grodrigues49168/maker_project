@@ -19,8 +19,9 @@ const Stack = createStackNavigator();
 const DashboardIcon =({focused,size})=><Ionicons name='md-home' size={size} color="blue" />
 const ProfileIcon =({focused, color, size})=><Ionicons name='md-person' size={size} color={color} />
 const VersionIcon =({focused, color, size})=><Ionicons name='md-refresh-circle' size={size} color={color} />
-const LoginIcon = ({focused, color, size}) => <Ionicons name='md-enter-sharp' size={size} color={color}/>
 const MqqtIcon = ({focused, color, size}) =>  <Ionicons name='md-git-network' size={size} color={color}/>
+const LoginIcon = ({focused, color, size}) => <Ionicons name='md-enter-sharp' size={size} color={color}/>
+
 const CadastroIcon = ({focused, color, size}) =>  <Ionicons name='md-person-add-sharp' size={size} color={color}/>
 
 

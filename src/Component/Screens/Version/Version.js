@@ -135,7 +135,7 @@ export default function () {
         </Animated.View>
       </View>
 
-      <Text style={style.lowerText}>V0.14 "beta"</Text>
+      <Text style={style.lowerText}>V0.17 "beta"</Text>
     </View>
   );
 }
